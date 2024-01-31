@@ -1,0 +1,9 @@
+quantization_OpenVino/datasets/yolo_dataset/images/*
+quantization_OpenVino/datasets/yolo_dataset/labels/*
+quantization_OpenVino/datasets/yolo_dataset/labels.cache
+quantization_OpenVino/__pycashe__/
+**/*.pt
+**/*.onnx
+quantization_OpenVino/quantized_res/
+.idea/
+quantization_OpenVino/fm2*.*

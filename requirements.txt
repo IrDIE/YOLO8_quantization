@@ -1,0 +1,10 @@
+loguru==0.7.2
+nncf==2.8.0
+numpy==1.22.2
+opencv_contrib_python==4.8.0.74
+opencv_python==4.8.0.74
+opencv_python_headless==4.8.0.74
+openvino==2023.3.0
+openvino_dev==2023.3.0
+torch==2.1.2
+ultralytics==8.0.216
