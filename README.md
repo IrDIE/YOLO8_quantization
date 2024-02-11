@@ -1,12 +1,12 @@
 # Faster your YOLOv8 (detection) inference with openVINO quantization
 
 ## Currently available: 
-* Base quantization, quantization with accuracy control.
-* Accuracy test for quantized model 
+* Base quantization, quantization with accuracy control ( +how add layers to `ignored_scope` explained).
+* Accuracy test for quantized model (basic mAp50 here, but you can pass your custom fucntion)
 
 ## How use:
 * git clone
-* refactor main() in `quantize.py` with your paths
+* refactor main() in `quantize.py` with your paths (`pt_modelpath`, `yaml_datapath` )
 * run `quantize.py`
 
 ---
