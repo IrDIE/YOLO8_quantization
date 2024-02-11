@@ -51,7 +51,12 @@ names:
             "/model.22/Add_10"
         ]
   ```
-  If you wanna see all layer names of your model &rarr; pass  `get_model_graph = True` in `main_basic()` function.
+  If you want to see all layer names of your model &rarr; pass  `get_model_graph = True` in `main_basic()` function.
+  It will save .dot file in `graph/dump/graph_model.dot`. Looking at this file you can understand all layer names to pass it to `ignored_scope`.
+  Also, you can visualise it file (for example in https://www.devtoolsdaily.com/graphviz/):
+  
+  | 	link to image here |
+  |---------------------|
 
 
   
