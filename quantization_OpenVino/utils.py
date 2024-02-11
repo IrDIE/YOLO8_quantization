@@ -124,7 +124,7 @@ def prepare_quantization_dataset(pt_modelpath, args, datapath, yaml_datapath):
     quantization_dataset = nncf.Dataset(data_loader, transform_fn)
     return quantization_dataset, validator, data_loader
 
-def compare_accuracy(validation_metric, model_path, args, pt_modelpath, datapath='./', yaml_datapath='./calibration.yaml' ):
+def get_accuracy(validation_metric, model_path, args, pt_modelpath, datapath='./', yaml_datapath='./datadata.yaml'):
     """
     model_path : xml
     pt_modelpath : pt

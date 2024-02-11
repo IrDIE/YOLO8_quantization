@@ -19,7 +19,7 @@ Need:
 
 ```
 #file: calibration.yaml
-path: ../YOLO8_quantization/quantization_OpenVino/datasets/yolo_dataset # dataset root dir
+path: ./yolo_dataset # your dataset root dir
 
 train: images # train images (relative to 'path') 
 val: images # val images (relative to 'path') 
@@ -29,7 +29,33 @@ names:
   0: car
   ...
 ```
-* (optional) you can define `ignored_scope` in `main_basic()` function like in *openVINO tutorial - https://docs.openvino.ai/2022.3/basic_qauntization_flow.html#set-up-an-environment*
+* (optional) you can define `ignored_scope` in `main_basic()` or `main_AC()` functions like in *openVINO tutorial - https://docs.openvino.ai/2022.3/basic_qauntization_flow.html#set-up-an-environment*
+
+<details>
+  <summary>HOW SET LAYERS OF YOUR MODEL IN ignored_scope </summary>
+  
+  In OpenVino example you can see that layer names for `ignored_scope` parameter looks like this:
+  ```python
+  names=[
+            "/model.22/dfl/conv/Conv",  # in the post-processing subgraph
+            "/model.22/Add",
+            "/model.22/Add_1",
+            "/model.22/Add_2",
+            "/model.22/Add_3",
+            "/model.22/Add_4",
+            "/model.22/Add_5",
+            "/model.22/Add_6",
+            "/model.22/Add_7",
+            "/model.22/Add_8",
+            "/model.22/Add_9",
+            "/model.22/Add_10"
+        ]
+  ```
+  If you wanna see all layer names of your model &rarr; pass  `get_model_graph = True` in `main_basic()` function.
+
+
+  
+</details>
 
 ---
 ### Quantization with accuracy control (`quantize/main_AC()`)
