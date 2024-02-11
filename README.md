@@ -56,7 +56,7 @@ names:
   It will save .dot file in `graph/dump/graph_model.dot`. Looking at this file you can understand all layer names to pass it to `ignored_scope`.
   Also, you can visualise it file (for example in https://www.devtoolsdaily.com/graphviz/):
   
-  | https://github.com/IrDIE/YOLO8_quantization/blob/master/readme_imgs/gramp_example.png |
+  |![](https://github.com/IrDIE/YOLO8_quantization/blob/master/readme_imgs/gramp_example.png)  |
   |---------------------|
 
 
