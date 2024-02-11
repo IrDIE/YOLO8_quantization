@@ -13,7 +13,8 @@
 ### Base quantization (`quantize/main_basic()`)
 
 Need:
-* .pt model file* calibration dataset (In standart YOLO format, with labels. OpenVINO usually use about 300 images)
+* .pt model file
+* calibration dataset (In standart YOLO format, with labels. OpenVINO usually use about 300 images)
 * need to write standart .yaml file that describe dataset
   *  example of .yaml file:
 
