@@ -1,3 +1,5 @@
+import os
+
 from utils import *
 from nncf.quantization.advanced_parameters import AdvancedAccuracyRestorerParameters
 from ultralytics.cfg import get_cfg
@@ -13,6 +15,7 @@ def quantize_basic(ov_model, pt_modelpath, args , ignored_scope = None, datapath
     if get_model_graph:
         from nncf.common.utils.dot_file_rw import write_dot_graph
         graph = (GraphConverter.create_nncf_graph(ov_model))
+        os.makedirs("./graph/dump", exist_ok=True)
         write_dot_graph(graph._get_graph_for_visualization(), "./graph/dump/graph_model.dot")
         logger.info(f"\n\nmodel graph saved to directory = ./graph/dump/graph_model.dot\n")
 
